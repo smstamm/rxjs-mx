@@ -1,6 +1,6 @@
 import {
-  UPDATE_COUNT,
-  GET_DATA,
+  GET_DATA_FULFILLED,
+  UPDATE_COUNT_FULFILLED,
 } from './constants.js';
 
 const initialState = {
@@ -11,18 +11,17 @@ const initialState = {
 const dataReducer = (state = initialState, action) => {
 
   switch (action.type) {
-
-    case UPDATE_COUNT: {
-      return {
-        ...state,
-        count: parseInt(action.payload)
-      };
-    }
-
-    case GET_DATA: {
+    case GET_DATA_FULFILLED: {
       return {
         ...state,
         data: action.payload.results
+      };
+    }
+
+    case UPDATE_COUNT_FULFILLED: {
+      return {
+        ...state,
+        count: action.payload
       };
     }
 

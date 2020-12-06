@@ -1,6 +1,6 @@
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { getNames, udpateCount } from './redux/actions';
+import { getNames, updateCount } from './redux/actions';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function App() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(udpateCount(e.target.value));
+    dispatch(updateCount(e.target.value));
   }
 
   return (
