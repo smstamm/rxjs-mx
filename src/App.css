@@ -3,26 +3,52 @@
   flex-direction: column;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 25px;
 }
 
-.advice {
-  max-width: 75%;
-  height: 250px;
+.adviceContainer {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.advice .buttons {
+.adviceContainer h1 {
+  font-size: 2em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.adviceContainer .buttons {
   display: flex;
   justify-content: space-around;
-}
-
-.advice .buttons button {
-  
-}
-
-.App label {
-  margin-right: 12px;
-}
-
-.App button {
   margin-top: 25px;
+}
+
+.adviceContainer .buttons button:hover {
+  cursor: pointer;
+  box-shadow: 3px 4px 4px 0px lightgray;
+}
+
+.adviceContainer .buttons button {
+  padding: 12px;
+  border-radius: 3px;
+}
+
+.frequencyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frequencyContainer input {
+  padding: 5px;
+  margin: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .adviceContainer {
+    width: 100%;
+    height: 450px;
+  }
 }

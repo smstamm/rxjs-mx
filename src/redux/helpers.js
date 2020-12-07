@@ -22,7 +22,7 @@ export const configureStore = (persistedState) => {
 
 export function loadState() {
   try {
-    const serializedState = sessionStorage.getItem('names_state');
+    const serializedState = sessionStorage.getItem('advice_state');
     return serializedState !== null ? JSON.parse(serializedState) : undefined;
   }
   catch (error) {
@@ -33,9 +33,9 @@ export function loadState() {
 export function persistState(state) {
   try {
     const serializedState = JSON.stringify(state);
-    sessionStorage.setItem('names_state', serializedState);
+    sessionStorage.setItem('advice_state', serializedState);
   }
   catch (error) {
-    console.log('Error trying to save data to browser storage');
+    console.log('Error trying to save to browser storage');
   }
 };

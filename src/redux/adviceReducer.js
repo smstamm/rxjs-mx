@@ -1,28 +1,19 @@
 import {
-  GET_DATA_FULFILLED,
   POLL_ADVICE_FULFILLED,
   POLL_ADVICE_START,
   POLL_ADVICE_STOP,
-  UPDATE_COUNT_FULFILLED,
+  UPDATE_FREQUENCY_FULFILLED,
 } from './constants.js';
 
 const initialState = {
   advice: '',
-  count: 0,
-  data: [],
+  frequency: 1,
   isPolling: false,
 };
 
-const dataReducer = (state = initialState, action) => {
+const adviceReducer = (state = initialState, action) => {
 
   switch (action.type) {
-    case GET_DATA_FULFILLED: {
-      return {
-        ...state,
-        data: action.payload.results
-      };
-    }
-
     case POLL_ADVICE_FULFILLED: {
       return {
         ...state,
@@ -45,10 +36,10 @@ const dataReducer = (state = initialState, action) => {
       }
     }
 
-    case UPDATE_COUNT_FULFILLED: {
+    case UPDATE_FREQUENCY_FULFILLED: {
       return {
         ...state,
-        count: action.payload
+        frequency: action.payload
       };
     }
 
@@ -58,4 +49,4 @@ const dataReducer = (state = initialState, action) => {
   }
 };
 
-export default dataReducer;
+export default adviceReducer;
