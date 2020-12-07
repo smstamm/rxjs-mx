@@ -24,7 +24,7 @@ function App() {
           <label htmlFor='pollingSeconds'>How frequently do you need advice (in seconds)?</label>
           <input max={10} min={1} name='pollingSeconds' type='number' value={frequency} onChange={e => dispatch(updateFrequency(e.target.value))} />
         </div>
-        <div className='buttons'>
+        <div className='buttonsContainer'>
           <button onClick={getAdvice}>Start Polling</button>
           <button onClick={() => dispatch(stopAdvicePolling())}>Stop Polling</button>
         </div>

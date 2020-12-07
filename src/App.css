@@ -19,18 +19,18 @@
   flex-grow: 1;
 }
 
-.adviceContainer .buttons {
+.buttonsContainer {
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
 }
 
-.adviceContainer .buttons button:hover {
+.buttonsContainer button:hover {
   cursor: pointer;
   box-shadow: 3px 4px 4px 0px lightgray;
 }
 
-.adviceContainer .buttons button {
+.buttonsContainer button {
   padding: 12px;
   border-radius: 3px;
 }
@@ -49,6 +49,6 @@
 @media only screen and (max-width: 600px) {
   .adviceContainer {
     width: 100%;
-    height: 450px;
+    height: 100%;
   }
 }
