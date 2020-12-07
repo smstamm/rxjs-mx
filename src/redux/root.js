@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import dataReducer from './dataReducer';
 import { combineEpics } from 'redux-observable';
-import { getNamesEpic, updateCountEpic } from './actions';
+import { adviceEpic, getNamesEpic, updateCountEpic } from './actions';
 
 // reducers
 export const rootReducer = combineReducers({
@@ -10,6 +10,7 @@ export const rootReducer = combineReducers({
 
 // epics
 export const rootEpic = combineEpics(
+  adviceEpic,
   getNamesEpic,
   updateCountEpic,
 );
