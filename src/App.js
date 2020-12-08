@@ -8,7 +8,7 @@ function App() {
   const frequency = useSelector(state => state.adviceReducer.frequency);
 
   const getAdvice = () => {
-    if (frequency > 0 && frequency < 10) {
+    if (frequency > 0 && frequency <= 10) {
       dispatch(startAdvicePolling());
     }
     else {
